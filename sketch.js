@@ -1,46 +1,30 @@
-let img1;
-let img2; //오른쪽 응원방망이
-let img3; //왼쪽 응원 방망이
+let img1; // 노동요 버전(배속) 배경
+let img2; // 일반 배경
 
 function preload() {
-  img1 = loadImage('f1.png'); 
-  img2 = loadImage('f2.png');
-  img3 = loadImage('f3.png');
+  img1 = loadImage("f11.png");
+  img2 = loadImage("f22.png");
 }
 
 function setup() {
-// (캔버스크기640x640 + 아래 추가 640)
-  createCanvas(640, 1280);
+  createCanvas(640, 1280);//(캔버스 크기 640x640 + 아래 추가 640)
 }
 
 function draw() {
   background(220);
   image(img1, 0, 0, 640, 640);
-  
-  let img2Width = 300;
-  let img2Height = 200; 
-  let img2X = 297; 
-  let img2Y = 400; 
-  image(img2, img2X, img2Y, img2Width, img2Height);
-  
-  let img3Width = 300;
-  let img3Height = 200; 
-  let img3X = 36; 
-  let img3Y = 400; 
-  image(img3, img3X, img3Y, img3Width, img3Height);
-  
-  
-
+  image(img2, 0, 0, 640, 640);
+  fill(253, 159, 40); // 오렌지색 하단 배경
+  rect(0, 640, 640, 640); //640*640 하단 공간 추가
   fill(255);
-  rect(0, 640, 640, 640); 
-  fill(252, 86, 3);
   textSize(32);
   textAlign(CENTER, CENTER);
-  text("𝐑𝐈𝐃𝐄 𝐓𝐇𝐄 𝐒𝐓𝐎𝐑𝐌", width / 2, 640 + 640 / 2); 
-  //한화이글스의 2025년 슬로건을 중앙에 배치
+  text("𝐑𝐈𝐃𝐄 𝐓𝐇𝐄 𝐒𝐓𝐎𝐑𝐌", width / 2, 640 + 640 / 2); // 한화이글스의 2025년 슬로건
+ stroke(0); // 검정색 테두리
+  strokeWeight(3); // 테두리 두께
+  fill(255); // 흰색
+  ellipse(230, 410, 50, 50);//야구공
+  
 }
-
-
-
 
 
