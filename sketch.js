@@ -15,7 +15,7 @@ let amp;
 let img1; // 노동요 버전(배속) 배경
 let img2; // 일반 배경
 let img3; // 캐릭터
-let img3X = 130; // img3의 x값 고정
+let img3X = 140; // img3의 x값 고정
 let img3Y = 470; // img3의 초기 y값
 
 function preload() {
@@ -35,38 +35,38 @@ function setup() {
 
   // PLAY 버튼 (행복송)
   let buttonPlay1 = createButton("PLAY 행복송");
-  buttonPlay1.position(20, 20);
+ buttonPlay1.position(20, 650);
   buttonPlay1.mousePressed(() => playMusic(mm, 'mm1'));
 
   // PLAY 버튼 (내사랑 한화 내사랑 이글스)
   let buttonPlay2 = createButton("PLAY 내사랑 한화");
-  buttonPlay2.position(20, 60);
+  buttonPlay2.position(100, 650);
   buttonPlay2.mousePressed(() => playMusic(mm2, 'mm2'));
 
  // STOP 버튼
   buttonPause = createButton("STOP");
-  buttonPause.position(100, 20);
+  buttonPause.position(235, 650);
   buttonPause.mousePressed(pauseMusic);
 
   // JUMP << 버튼
   buttonJump = createButton("<<");
-  buttonJump.position(20, 100);
+  buttonJump.position(200, 650);
   buttonJump.mousePressed(jumpSong2);
 
   // JUMP >> 버튼
   buttonJump2 = createButton(">>");
-  buttonJump2.position(100, 100);
+  buttonJump2.position(285, 650);
   buttonJump2.mousePressed(jumpSong);
 
   // 슬라이더 설정
   slider = createSlider(0, 1, 0.5, 0.01); // 볼륨 조절
-  slider.position(20, 140);
+  slider.position(20, 680);
   
   slidePan = createSlider(-1, 1, 0, 0.1); // 팬 조절
-  slidePan.position(20, 180);
+  slidePan.position(20, 710);
 
   sliderRate = createSlider(0.5, 2, 1, 0.1); // 속도 조절
-  sliderRate.position(20, 220);
+  sliderRate.position(20, 740);
 }
 
 function draw() {
@@ -84,9 +84,9 @@ function draw() {
   let vol = amp.getLevel();
 
   // 캐릭터 움직임 추가 (볼륨, 속도에 맞춰서 위아래로 튕기기)
-  img3Y = 300 + sin(frameCount * sped * 0.5) * map(vol, 0, 1, 0, 50);
+  img3Y = 190 + sin(frameCount * sped * 0.5) * map(vol, 0, 1, 0, 50);
 
-  image(img3, img3X, img3Y, 300, 300);
+  image(img3, img3X, img3Y, 400, 450);
 
   fill(253, 159, 40); // 오렌지색 하단 배경
   rect(0, 640, 640, 640); // 640*640 하단 공간 추가
