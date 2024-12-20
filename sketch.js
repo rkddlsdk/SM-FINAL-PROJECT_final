@@ -2,8 +2,8 @@ let img1; // 노동요 버전(배속) 배경
 let img2; // 일반 배경
 
 function preload() {
-  img1 = loadImage("f11.png");
-  img2 = loadImage("f22.png");
+  img1 = loadImage("f111.png");
+  img2 = loadImage("f222.png");
 }
 
 function setup() {
