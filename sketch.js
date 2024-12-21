@@ -165,15 +165,15 @@ function pauseMusic() {
 
 function jumpSong() {
   if (mm.isPlaying()) {
-    jumpV1 += 105 / 5; // 행복송은 1분 45초 (=105초)를 5로 나눔
+    jumpV1 += 102 / 5; // 행복송은 1분 42초 (=102초)를 5로 나눔
     if (jumpV1 >= 105) {
-      jumpV1 = 105;
+      jumpV1 = 102;
     }
     mm.jump(jumpV1);
   } else if (mm2.isPlaying()) {
-    jumpV2 += 102 / 5; // 내사랑 한화는 1분 42초 (=102초)를 5로 나눔
-    if (jumpV2 >= 102) {
-      jumpV2 = 102; 
+    jumpV2 += 105 / 5; // 내사랑 한화는 1분 45초 (=105초)를 5로 나눔
+    if (jumpV2 >= 105) {
+      jumpV2 = 105; 
     }
     mm2.jump(jumpV2);
   } else if (mm3.isPlaying()) {
@@ -193,13 +193,13 @@ function jumpSong() {
 
 function jumpSong2() {
   if (mm.isPlaying()) {
-    jumpV1 -= 105 / 5; 
+    jumpV1 -= 102 / 5; 
     if (jumpV1 <= 0) {
       jumpV1 = 0; 
     }
     mm.jump(jumpV1);
   } else if (mm2.isPlaying()) {
-    jumpV2 -= 102 / 5; 
+    jumpV2 -= 105 / 5; 
     if (jumpV2 <= 0) {
       jumpV2 = 0; 
     }
